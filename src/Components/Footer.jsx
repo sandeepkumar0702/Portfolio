@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <Box component="footer" className="bg-gray-900 text-white py-10">
       <Container maxWidth="lg">
-        <Grid container   spacing={{ xs: 4, sm: 4, md: 12, lg: 20 }}>
-          <Grid item xs={12} sm={4}>
+        <Grid container   spacing={{ xs: 4, sm: 6, md: 16, lg: 22 }}>
+          <Grid item xs={14} sm={6}>
             <Typography variant="h6" className="text-lg font-bold mb-4">
               Sandeep Kumar
             </Typography>
@@ -47,10 +47,10 @@ const Footer = () => {
               Connect
             </Typography>
             <Box  sx={{ display: 'flex', gap: 2 }}>
-              <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+              <Link href="http://www.linkedin.com/in/SandeepKumar8079" target="_blank" aria-label="LinkedIn">
                 <FontAwesomeIcon icon={faLinkedin} className="text-gray-300 hover:text-blue-400 text-2xl" />
               </Link>
-              <Link href="https://github.com" target="_blank" aria-label="GitHub">
+              <Link href="https://github.com/sandeepkumar0702" target="_blank" aria-label="GitHub">
                 <FontAwesomeIcon icon={faGithub} className="text-gray-300 hover:text-blue-400 text-2xl" />
               </Link>
               <Link href="https://twitter.com" target="_blank" aria-label="Twitter">
