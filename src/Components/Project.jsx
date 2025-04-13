@@ -9,8 +9,12 @@ import {
   Box,
 } from "@mui/material";
 import bookStoreImage from "../assets/bookStoreImage.png";
+import pgfinderImage from "../assets/pgfinderImage.png";
+import fundoNotesImage from "../assets/fundooNotesImage.png";
+import discoveryLandImage from "../assets/discoverylandImage.png";
+
 import Footer from "./Footer";
-import Navbar from "./Navabar";
+import Navbar from "./Navbar";
 
 const projects = [
   {
@@ -21,30 +25,43 @@ const projects = [
       "API Integration",
       "Responsive Design",
       "Swagger Ui",
+      "SonarQube",
     ],
     description:
       "Developed a full-stack book store website using React, TypeScript, and Redux, enabling users to browse, search, and purchase books with a seamless shopping experience. Implemented secure user authentication with JWT and integrated REST APIs for real-time book data fetching, cart management, and order processing. Designed a responsive UI using Tailwind CSS and Material UI, ensuring cross-device compatibility and an optimal user experience.",
   },
   {
     title: "Pg finder Website",
-    image: bookStoreImage,
-    highlights: ["Html", "CSS", "Node", "Express.JS"],
+    image: pgfinderImage,
+    highlights: [
+      "Html",
+      "CSS",
+      "Node",
+      "Express.JS",
+      "MongoDB",
+      "API Integration",
+    ],
     description:
       "Developed Pg-Finder, a full-stack web application to streamline PG (Paying Guest) accommodation search, booking, and reviews, addressing common challenges faced by college students.Designed a scalable and efficient backend using Express.Js and MongoDB, ensuring smooth handling of data and user interactions.Deployed on Render with MongoDB Atlas as the cloud database, delivering a robust and accessible online platform.",
   },
   {
     title: "Fundoo-Notes",
-    image: bookStoreImage,
-    highlights: ["Vite-React.js", "Tailwind CSS", "Material UI"],
+    image: fundoNotesImage,
+    highlights: [
+      "Vite-React.js",
+      "Tailwind CSS",
+      "Material UI",
+      "API Integration",
+    ],
     description:
       "Built Fundoo Notes, a feature-rich note-taking application simulating real-world functionalities like creating, updating, archiving, and deleting notes. Integrated with a dummy REST API to mimic backend operations, enabling realistic front-end development and testing of CRUD functionalities. Implemented using React.js with component-based architecture and responsive UI design, ensuring a smooth and interactive user experience.",
   },
   {
-    title: "Weather Dashboard",
-    image: bookStoreImage,
-    highlights: ["API Integration", "Chart.js", "Mobile-First"],
+    title: "DiscoveryLand",
+    image: discoveryLandImage,
+    highlights: ["Html", "BootStrap", "JavaScript", "Animations"],
     description:
-      "A weather app providing real-time forecasts with interactive charts.",
+      "I focused on designing and developing responsive frontend layouts for the Discovery UI. This included integrating high-end media like videos and images with smooth top-to-bottom scroll navigation based on header tabs. I created adaptive and visually appealing layouts for the Gallery, Navbar, Footer, Our World, Experience, and About pages, ensuring an engaging and seamless user experience across all devices.",
   },
 ];
 
@@ -69,25 +86,27 @@ const Project = () => {
                 className="flex flex-col md:flex-row items-center"
                 sx={{
                   flexDirection: {
-                    xs: "column", // Stack vertically on mobile and tablet
-                    md: index % 2 === 0 ? "row" : "row-reverse", // Alternate on laptop
+                    xs: "column",
+                    md: index % 2 === 0 ? "row" : "row-reverse",
                   },
                 }}
               >
-                {/* Image Section */}
                 <CardMedia
                   component="img"
                   image={project.image}
                   alt={project.title}
                   className="object-contain w-full h-90"
                   sx={{
+                    height: { xs: "100%", sm: "90%", md: "80%" },
+                    minHeight: { xs: 200, sm: 250, md: 300 },
                     maxHeight: 400,
+                    width: { xs: "100%", sm: "90%", md: "70%" },
                     objectFit: "contain",
-                    border: "2px solid #ccc", // Add border
+                    border: "2px solid #ccc",
                     borderRadius: "12px",
                   }}
                 />
-                {/* Content Section */}
+
                 <CardContent className="w-full p-6 mr-1">
                   <Typography
                     variant="h4"
